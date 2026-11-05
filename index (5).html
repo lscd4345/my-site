@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AURUM Detailing — премиальный автодетейлинг: полировка, керамика, химчистка, оклейка плёнкой</title>
+<meta name="description" content="Студия премиального автодетейлинга AURUM: полировка кузова, керамическое защитное покрытие, химчистка салона, оклейка PPF-плёнкой. Онлайн-калькулятор и запись в Telegram и WhatsApp.">
+<meta name="keywords" content="автодетейлинг, полировка кузова, защитное покрытие, керамика, химчистка салона, оклейка плёнкой, PPF, детейлинг Баку">
+<meta property="og:title" content="AURUM Detailing — премиальный автодетейлинг">
+<meta property="og:description" content="Полировка, керамика, химчистка салона и оклейка плёнкой. Рассчитайте стоимость онлайн.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0b0b0f">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "AURUM Detailing",
+  "description": "Студия премиального автодетейлинга: полировка, керамическое покрытие, химчистка салона, оклейка плёнкой.",
+  "url": "https://example.com/",
+  "telephone": "+994000000000",
+  "priceRange": "$$$",
+  "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ул. Нефтчиляр, 100",
+    "addressLocality": "Баку",
+    "addressCountry": "AZ"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 40.3777, "longitude": 49.8920 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "09:00", "closes": "20:00"
+  }],
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "212" },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Услуги детейлинга",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Полировка кузова" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Керамическое покрытие" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Химчистка салона" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Оклейка защитной плёнкой PPF" } }
+    ]
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: { fontFamily: { sans: ['"SF Pro Display"','Inter','system-ui','sans-serif'] } } } };
+</script>
+<style>
+  :root { --bg:#0b0b0f; --silver:#c9ccd4; --line:rgba(255,255,255,.1); --accent:#9db8ff; --accent2:#e6c892; }
+  html { scroll-behavior:smooth; }
+  body { background:var(--bg); color:#f5f5f7; font-family:'SF Pro Display',Inter,system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  .glass { background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025)); border:1px solid var(--line); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); box-shadow:0 30px 80px -30px rgba(0,0,0,.8), inset 0 1px 0 rgba(255,255,255,.06); }
+  .grad-text { background:linear-gradient(100deg,#fff 10%,var(--accent) 50%,var(--accent2) 95%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .reveal { opacity:0; transform:translateY(36px); transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity:1; transform:none; }
+  .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+  .btn { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; padding:.9rem 1.6rem; border-radius:999px; font-weight:600; transition:transform .2s, box-shadow .2s, background .2s; }
+  .btn:hover { transform:translateY(-2px); }
+  .btn-primary { background:#fff; color:#0b0b0f; }
+  .btn-primary:hover { box-shadow:0 10px 40px -10px rgba(157,184,255,.6); }
+  .btn-ghost { border:1px solid rgba(255,255,255,.2); color:#fff; }
+  .btn-ghost:hover { background:rgba(255,255,255,.08); }
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+  .svc { cursor:pointer; transition:border-color .25s, background .25s; }
+  .svc:has(input:checked) { border-color:var(--accent); background:linear-gradient(180deg,rgba(157,184,255,.14),rgba(157,184,255,.03)); }
+  .slot { padding:.55rem 0; border-radius:12px; border:1px solid var(--line); font-size:.9rem; transition:all .2s; }
+  .slot:hover { border-color:rgba(255,255,255,.4); }
+  .slot[aria-pressed="true"] { background:#fff; color:#0b0b0f; border-color:#fff; font-weight:600; }
+  .slot:disabled { opacity:.3; text-decoration:line-through; cursor:not-allowed; }
+  input[type="date"], select { color-scheme:dark; }
+  .field { width:100%; background:rgba(255,255,255,.05); border:1px solid var(--line); border-radius:14px; padding:.85rem 1rem; color:#fff; }
+  .track { display:flex; transition:transform .6s cubic-bezier(.2,.7,.2,1); }
+  .glow { position:absolute; border-radius:50%; filter:blur(120px); pointer-events:none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity:1; transform:none; transition:none; } html { scroll-behavior:auto; } .track { transition:none; } }
+</style>
+</head>
+<body>
+
+<header class="fixed top-0 inset-x-0 z-50">
+  <nav class="mx-auto max-w-6xl mt-4 mx-4 md:mx-auto px-5 py-3 glass rounded-full flex items-center justify-between" aria-label="Главное меню">
+    <a href="#top" class="font-semibold tracking-tight text-lg">AURUM<span class="text-zinc-500 font-light"> Detailing</span></a>
+    <div class="hidden md:flex gap-7 text-sm text-zinc-300">
+      <a href="#services" class="hover:text-white">Услуги</a>
+      <a href="#booking" class="hover:text-white">Калькулятор</a>
+      <a href="#reviews" class="hover:text-white">Отзывы</a>
+      <a href="#contacts" class="hover:text-white">Контакты</a>
+    </div>
+    <a href="#booking" class="btn btn-primary !py-2 !px-4 text-sm">Записаться</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center overflow-hidden px-6" aria-labelledby="h1">
+    <div class="absolute inset-0" data-parallax="0.25">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=80" alt="Чёрный спорткар после полировки в студии детейлинга" class="w-full h-[120%] object-cover opacity-40" onerror="this.style.display='none'">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-[#0b0b0f]/50 via-transparent to-[#0b0b0f]"></div>
+    <div class="glow w-[480px] h-[480px] bg-blue-500/20 -top-20 -left-20"></div>
+    <div class="relative mx-auto max-w-5xl text-center pt-28">
+      <p class="reveal text-zinc-400 mb-6">Студия премиального автодетейлинга</p>
+      <h1 id="h1" class="reveal d1 text-5xl sm:text-7xl md:text-8xl font-bold tracking-tight leading-[1.02]">
+        Автомобиль, который<br><span class="grad-text">выглядит как новый.</span>
+      </h1>
+      <p class="reveal d2 mt-8 max-w-2xl mx-auto text-lg md:text-xl text-zinc-300 font-light">Полировка, керамическое покрытие, химчистка салона и оклейка плёнкой. Рассчитайте стоимость за минуту и запишитесь в удобное время.</p>
+      <div class="reveal d3 mt-10 flex flex-wrap gap-4 justify-center">
+        <a href="#booking" class="btn btn-primary">Рассчитать стоимость</a>
+        <a href="#services" class="btn btn-ghost">Смотреть услуги</a>
+      </div>
+      <dl class="reveal d3 mt-20 grid grid-cols-3 gap-4 max-w-2xl mx-auto">
+        <div><dt class="text-zinc-500 text-sm">Автомобилей в год</dt><dd class="text-3xl md:text-4xl font-semibold mt-1">1 200+</dd></div>
+        <div><dt class="text-zinc-500 text-sm">Гарантия на керамику</dt><dd class="text-3xl md:text-4xl font-semibold mt-1">до 5 лет</dd></div>
+        <div><dt class="text-zinc-500 text-sm">Средняя оценка</dt><dd class="text-3xl md:text-4xl font-semibold mt-1">4.9 / 5</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-32 md:py-44 px-6" aria-labelledby="h-services">
+    <div class="mx-auto max-w-6xl">
+      <header class="max-w-3xl">
+        <h2 id="h-services" class="reveal text-4xl md:text-6xl font-bold tracking-tight">Четыре услуги.<br><span class="grad-text">Один результат.</span></h2>
+        <p class="reveal d1 mt-6 text-lg text-zinc-400">Работаем с профессиональными составами и материалами. Каждый этап проходит контроль под профессиональным светом.</p>
+      </header>
+      <div class="mt-16 grid md:grid-cols-2 gap-6">
+        <article class="reveal glass rounded-3xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=1000&q=80" alt="Полировка кузова автомобиля" loading="lazy" class="h-56 w-full object-cover" onerror="this.style.display='none'">
+          <div class="p-8"><h3 class="text-2xl font-semibold">Полировка кузова</h3><p class="mt-3 text-zinc-400">Убираем царапины, голограммы и потёртости. Возвращаем глубину цвета и зеркальный блеск лаку.</p></div>
+        </article>
+        <article class="reveal d1 glass rounded-3xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&w=1000&q=80" alt="Нанесение керамического защитного покрытия" loading="lazy" class="h-56 w-full object-cover" onerror="this.style.display='none'">
+          <div class="p-8"><h3 class="text-2xl font-semibold">Керамическое покрытие</h3><p class="mt-3 text-zinc-400">Защитное покрытие отталкивает воду и грязь, защищает от химии и ультрафиолета на годы.</p></div>
+        </article>
+        <article class="reveal glass rounded-3xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1000&q=80" alt="Химчистка салона автомобиля" loading="lazy" class="h-56 w-full object-cover" onerror="this.style.display='none'">
+          <div class="p-8"><h3 class="text-2xl font-semibold">Химчистка салона</h3><p class="mt-3 text-zinc-400">Глубокая чистка кожи, ткани и пластика, удаление пятен и запахов, озонация.</p></div>
+        </article>
+        <article class="reveal d1 glass rounded-3xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1000&q=80" alt="Оклейка автомобиля защитной плёнкой" loading="lazy" class="h-56 w-full object-cover" onerror="this.style.display='none'">
+          <div class="p-8"><h3 class="text-2xl font-semibold">Оклейка плёнкой</h3><p class="mt-3 text-zinc-400">Прозрачная PPF-плёнка защищает от сколов и царапин. Доступна цветная и матовая плёнка.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section id="booking" class="relative py-32 md:py-44 px-6 overflow-hidden" aria-labelledby="h-book">
+    <div class="glow w-[520px] h-[520px] bg-amber-300/10 right-0 top-40"></div>
+    <div class="relative mx-auto max-w-6xl">
+      <header class="max-w-3xl">
+        <h2 id="h-book" class="reveal text-4xl md:text-6xl font-bold tracking-tight">Рассчитайте и <span class="grad-text">запишитесь онлайн.</span></h2>
+        <p class="reveal d1 mt-6 text-lg text-zinc-400">Выберите класс автомобиля, услуги, дату и время. Заявка уйдёт в мессенджер уже с готовым текстом.</p>
+      </header>
+
+      <div class="mt-14 grid lg:grid-cols-5 gap-6">
+        <div class="lg:col-span-3 space-y-6">
+          <div class="reveal glass rounded-3xl p-6 md:p-8">
+            <label for="carClass" class="font-semibold text-lg">Класс автомобиля</label>
+            <select id="carClass" class="field mt-4">
+              <option value="1" data-name="Компакт / седан">Компакт / седан (×1.0)</option>
+              <option value="1.25" data-name="Кроссовер">Кроссовер (×1.25)</option>
+              <option value="1.5" data-name="Внедорожник / минивэн">Внедорожник / минивэн (×1.5)</option>
+              <option value="1.8" data-name="Премиум / спорткар">Премиум / спорткар (×1.8)</option>
+            </select>
+          </div>
+
+          <fieldset class="reveal glass rounded-3xl p-6 md:p-8">
+            <legend class="font-semibold text-lg px-1">Услуги</legend>
+            <div id="serviceList" class="mt-4 grid sm:grid-cols-2 gap-3"></div>
+          </fieldset>
+
+          <div class="reveal glass rounded-3xl p-6 md:p-8">
+            <h3 class="font-semibold text-lg">Дата и время</h3>
+            <div class="mt-4 grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="date" class="text-sm text-zinc-400">Дата</label>
+                <input type="date" id="date" class="field mt-2">
+              </div>
+              <div>
+                <label for="name" class="text-sm text-zinc-400">Ваше имя</label>
+                <input type="text" id="name" class="field mt-2" placeholder="Например, Эльнур" autocomplete="name">
+              </div>
+            </div>
+            <p class="text-sm text-zinc-400 mt-6">Свободное время</p>
+            <div id="slots" class="mt-3 grid grid-cols-4 sm:grid-cols-6 gap-2"></div>
+          </div>
+        </div>
+
+        <aside class="lg:col-span-2" aria-live="polite">
+          <div class="reveal d1 glass rounded-3xl p-6 md:p-8 lg:sticky lg:top-28">
+            <h3 class="font-semibold text-lg">Ваша заявка</h3>
+            <ul id="summaryList" class="mt-5 space-y-3 text-zinc-300 text-sm min-h-[64px]"></ul>
+            <div class="mt-6 pt-6 border-t border-white/10 text-sm space-y-1 text-zinc-400">
+              <p>Автомобиль: <span id="sumCar" class="text-white">—</span></p>
+              <p>Дата и время: <span id="sumDate" class="text-white">не выбрано</span></p>
+            </div>
+            <div class="mt-6">
+              <p class="text-sm text-zinc-400">Ориентировочная стоимость</p>
+              <p class="text-5xl font-bold tracking-tight mt-1"><span id="total" class="grad-text">0</span> <span class="text-2xl text-zinc-400">AZN</span></p>
+              <p class="text-xs text-zinc-500 mt-2">Итоговая цена уточняется после осмотра автомобиля.</p>
+            </div>
+            <p id="err" class="text-sm text-amber-300 mt-4 hidden" role="alert"></p>
+            <div class="mt-6 grid gap-3">
+              <button id="sendTg" class="btn btn-primary">Отправить в Telegram</button>
+              <button id="sendWa" class="btn btn-ghost">Отправить в WhatsApp</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="py-32 md:py-44 px-6" aria-labelledby="h-rev">
+    <div class="mx-auto max-w-6xl">
+      <div class="flex flex-wrap items-end justify-between gap-6">
+        <h2 id="h-rev" class="reveal text-4xl md:text-6xl font-bold tracking-tight max-w-2xl">Что говорят <span class="grad-text">наши клиенты.</span></h2>
+        <div class="flex gap-3">
+          <button id="prev" class="btn btn-ghost !p-0 w-12 h-12" aria-label="Предыдущий отзыв">←</button>
+          <button id="next" class="btn btn-ghost !p-0 w-12 h-12" aria-label="Следующий отзыв">→</button>
+        </div>
+      </div>
+      <div class="mt-14 overflow-hidden reveal">
+        <div id="track" class="track"></div>
+      </div>
+      <div id="dots" class="mt-8 flex justify-center gap-2"></div>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section id="contacts" class="pb-32 md:pb-44 px-6" aria-labelledby="h-con">
+    <div class="mx-auto max-w-6xl">
+      <h2 id="h-con" class="reveal text-4xl md:text-6xl font-bold tracking-tight">Приезжайте <span class="grad-text">в студию.</span></h2>
+      <div class="mt-14 grid lg:grid-cols-2 gap-6">
+        <article class="reveal glass rounded-3xl p-8 md:p-10 space-y-8">
+          <div><h3 class="text-zinc-400 text-sm">Адрес</h3><address class="not-italic text-xl mt-1">г. Баку, ул. Нефтчиляр, 100<br><span class="text-zinc-400 text-base">Вход со стороны парковки</span></address></div>
+          <div><h3 class="text-zinc-400 text-sm">График работы</h3>
+            <p class="text-xl mt-1">Пн–Сб: 09:00 – 20:00</p><p class="text-zinc-400">Воскресенье: по предварительной записи</p></div>
+          <div><h3 class="text-zinc-400 text-sm">Телефоны</h3>
+            <p class="mt-1 text-xl"><a href="tel:+994000000000" class="hover:text-white">+994 00 000 00 00</a></p>
+            <p class="text-xl"><a href="tel:+70000000000" class="hover:text-white">+7 000 000 00 00</a></p></div>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://t.me/your_username" target="_blank" rel="noopener" class="btn btn-ghost">Telegram</a>
+            <a href="https://wa.me/994000000000" target="_blank" rel="noopener" class="btn btn-ghost">WhatsApp</a>
+          </div>
+        </article>
+        <div class="reveal d1 glass rounded-3xl overflow-hidden min-h-[420px]">
+          <iframe title="Карта: расположение студии AURUM Detailing в Баку" class="w-full h-full min-h-[420px] border-0" style="filter:invert(.92) hue-rotate(180deg) saturate(.7);" loading="lazy"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=49.8720%2C40.3650%2C49.9120%2C40.3900&amp;layer=mapnik&amp;marker=40.3777%2C49.8920"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="border-t border-white/10 py-10 px-6 text-center text-zinc-500 text-sm">
+  <p>© <span id="year"></span> AURUM Detailing. Премиальный автодетейлинг в Баку.</p>
+</footer>
+
+<script>
+(function () {
+  // ---------- Настройки (замените на реальные данные) ----------
+  var TG_USERNAME = 'your_username';      // Telegram без @
+  var WA_NUMBER   = '994000000000';       // WhatsApp: только цифры, с кодом страны (или 7XXXXXXXXXX)
+  var SERVICES = [
+    { id: 'polish',  name: 'Полировка кузова',      desc: 'Удаление царапин и голограмм', price: 250 },
+    { id: 'ceramic', name: 'Керамическое покрытие', desc: 'Защита лака до 5 лет',          price: 600 },
+    { id: 'interior',name: 'Химчистка салона',      desc: 'Кожа, ткань, пластик',          price: 180 },
+    { id: 'ppf',     name: 'Оклейка плёнкой PPF',   desc: 'Защита от сколов и царапин',    price: 1500 }
+  ];
+  var SLOTS = ['09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00'];
+  var REVIEWS = [
+    { n:'Эльнур М.', c:'BMW M4', t:'Сделали полировку и керамику. Машина выглядит лучше, чем в салоне. Через три месяца вода по-прежнему скатывается с кузова.', s:5, i:'photo-1544636331-e26879cd4d9b' },
+    { n:'Алексей К.', c:'Porsche 911', t:'Оклеили капот и бамперы плёнкой. Стыков не видно. Ребята работают аккуратно и всё объясняют по ходу работы.', s:5, i:'photo-1503376780353-7e6692767b70' },
+    { n:'Ляман А.', c:'Audi Q7', t:'Химчистка салона после поездки с детьми. Пятна и запах исчезли, сиденья как новые. Спасибо за оперативность.', s:5, i:'photo-1492144534655-ae79c964c9d7' },
+    { n:'Тимур Р.', c:'Mercedes C-Class', t:'Записался через калькулятор, цена совпала с финальной. Полировка вернула цвету глубину. Буду приезжать ещё.', s:4, i:'photo-1520340356584-f9917d1eb6c4' }
+  ];
+
+  var $ = function (s) { return document.querySelector(s); };
+  var state = { selected: {}, time: null };
+
+  // ---------- Услуги ----------
+  var list = $('#serviceList');
+  SERVICES.forEach(function (s) {
+    var l = document.createElement('label');
+    l.className = 'svc glass rounded-2xl p-4 flex gap-3 items-start';
+    l.innerHTML = '<input type="checkbox" value="' + s.id + '" class="mt-1 w-4 h-4 accent-blue-300">' +
+      '<span><span class="block font-medium">' + s.name + '</span><span class="block text-sm text-zinc-400">' + s.desc + '</span>' +
+      '<span class="block text-sm mt-1 text-zinc-300">от ' + s.price + ' AZN</span></span>';
+    l.querySelector('input').addEventListener('change', function (e) { state.selected[s.id] = e.target.checked; render(); });
+    list.appendChild(l);
+  });
+
+  // ---------- Дата и время ----------
+  var dateEl = $('#date');
+  var today = new Date(); today.setHours(0,0,0,0);
+  function iso(d) { return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'); }
+  dateEl.min = iso(today);
+  var max = new Date(today); max.setDate(max.getDate() + 60); dateEl.max = iso(max);
+  var next = new Date(today); next.setDate(next.getDate() + 1); dateEl.value = iso(next);
+
+  var slotsEl = $('#slots');
+  function busy(dateStr, time) { // демо-имитация занятых слотов
+    var h = 0, k = dateStr + time;
+    for (var i = 0; i < k.length; i++) h = (h * 31 + k.charCodeAt(i)) >>> 0;
+    return h % 5 === 0;
+  }
+  function buildSlots() {
+    slotsEl.innerHTML = '';
+    var now = new Date(), isToday = dateEl.value === iso(today);
+    SLOTS.forEach(function (t) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'slot'; b.textContent = t;
+      var past = isToday && parseInt(t) <= now.getHours();
+      b.disabled = busy(dateEl.value, t) || past;
+      b.setAttribute('aria-pressed', state.time === t ? 'true' : 'false');
+      if (b.disabled && state.time === t) state.time = null;
+      b.addEventListener('click', function () { state.time = t; buildSlots(); render(); });
+      slotsEl.appendChild(b);
+    });
+  }
+  dateEl.addEventListener('change', function () { state.time = null; buildSlots(); render(); });
+  $('#carClass').addEventListener('change', render);
+
+  // ---------- Расчёт ----------
+  function formatDate(v) {
+    if (!v) return '';
+    var p = v.split('-'); return p[2] + '.' + p[1] + '.' + p[0];
+  }
+  function calc() {
+    var sel = $('#carClass'), k = parseFloat(sel.value);
+    var items = SERVICES.filter(function (s) { return state.selected[s.id]; });
+    var sum = items.reduce(function (a, s) { return a + Math.round(s.price * k); }, 0);
+    return { items: items, sum: sum, k: k, car: sel.options[sel.selectedIndex].dataset.name };
+  }
+  var shown = 0;
+  function animateTotal(to) {
+    var from = shown, t0 = performance.now(), el = $('#total');
+    function step(t) {
+      var p = Math.min((t - t0) / 450, 1), e = 1 - Math.pow(1 - p, 3);
+      shown = Math.round(from + (to - from) * e);
+      el.textContent = shown.toLocaleString('ru-RU');
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  function render() {
+    var c = calc(), ul = $('#summaryList');
+    ul.innerHTML = c.items.length ? '' : '<li class="text-zinc-500">Выберите хотя бы одну услугу.</li>';
+    c.items.forEach(function (s) {
+      var li = document.createElement('li'); li.className = 'flex justify-between gap-4';
+      li.innerHTML = '<span>' + s.name + '</span><span class="text-white whitespace-nowrap">' + Math.round(s.price * c.k) + ' AZN</span>';
+      ul.appendChild(li);
+    });
+    $('#sumCar').textContent = c.car;
+    $('#sumDate').textContent = state.time ? formatDate(dateEl.value) + ', ' + state.time : 'не выбрано';
+    animateTotal(c.sum);
+    $('#err').classList.add('hidden');
+  }
+
+  // ---------- Отправка ----------
+  function buildMessage() {
+    var c = calc(), name = $('#name').value.trim();
+    var lines = ['Здравствуйте! Хочу записаться в AURUM Detailing.'];
+    if (name) lines.push('Имя: ' + name);
+    lines.push('Автомобиль: ' + c.car, 'Услуги:');
+    c.items.forEach(function (s) { lines.push('• ' + s.name + ' — ' + Math.round(s.price * c.k) + ' AZN'); });
+    lines.push('Дата и время: ' + formatDate(dateEl.value) + ', ' + state.time, 'Ориентировочная стоимость: ' + c.sum + ' AZN');
+    return lines.join('\n');
+  }
+  function validate() {
+    var c = calc(), err = $('#err'), msg = '';
+    if (!c.items.length) msg = 'Выберите хотя бы одну услугу.';
+    else if (!dateEl.value) msg = 'Выберите дату визита.';
+    else if (!state.time) msg = 'Выберите свободное время.';
+    err.textContent = msg; err.classList.toggle('hidden', !msg);
+    return !msg;
+  }
+  $('#sendTg').addEventListener('click', function () {
+    if (!validate()) return;
+    window.open('https://t.me/' + TG_USERNAME + '?text=' + encodeURIComponent(buildMessage()), '_blank', 'noopener');
+  });
+  $('#sendWa').addEventListener('click', function () {
+    if (!validate()) return;
+    window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(buildMessage()), '_blank', 'noopener');
+  });
+
+  // ---------- Отзывы ----------
+  var track = $('#track'), dots = $('#dots'), idx = 0, timer;
+  function stars(n) { var s = ''; for (var i = 1; i <= 5; i++) s += '<span style="color:' + (i <= n ? '#e6c892' : '#3a3a44') + '">★</span>'; return '<span aria-label="Оценка ' + n + ' из 5">' + s + '</span>'; }
+  REVIEWS.forEach(function (r, i) {
+    var d = document.createElement('div');
+    d.className = 'w-full shrink-0 px-1';
+    d.innerHTML = '<article class="glass rounded-3xl overflow-hidden grid md:grid-cols-2">' +
+      '<img src="https://images.unsplash.com/' + r.i + '?auto=format&fit=crop&w=1000&q=80" alt="Автомобиль клиента ' + r.c + ' после детейлинга" loading="lazy" class="w-full h-64 md:h-full object-cover bg-zinc-900" onerror="this.style.visibility=\'hidden\'">' +
+      '<div class="p-8 md:p-12 flex flex-col justify-center"><div class="text-2xl">' + stars(r.s) + '</div>' +
+      '<blockquote class="mt-6 text-xl md:text-2xl font-light leading-snug text-zinc-100">«' + r.t + '»</blockquote>' +
+      '<p class="mt-8 font-semibold">' + r.n + '</p><p class="text-zinc-400 text-sm">' + r.c + '</p></div></article>';
+    track.appendChild(d);
+    var b = document.createElement('button');
+    b.className = 'h-2 rounded-full bg-white/20 transition-all'; b.setAttribute('aria-label', 'Отзыв ' + (i + 1));
+    b.addEventListener('click', function () { go(i); reset(); });
+    dots.appendChild(b);
+  });
+  function go(i) {
+    idx = (i + REVIEWS.length) % REVIEWS.length;
+    track.style.transform = 'translateX(-' + idx * 100 + '%)';
+    Array.prototype.forEach.call(dots.children, function (b, j) { b.style.width = j === idx ? '28px' : '8px'; b.style.background = j === idx ? '#fff' : 'rgba(255,255,255,.2)'; });
+  }
+  function reset() { clearInterval(timer); timer = setInterval(function () { go(idx + 1); }, 7000); }
+  $('#prev').addEventListener('click', function () { go(idx - 1); reset(); });
+  $('#next').addEventListener('click', function () { go(idx + 1); reset(); });
+  go(0); reset();
+
+  // ---------- Анимации при скролле ----------
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+  var par = document.querySelectorAll('[data-parallax]');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce) {
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+      if (ticking) return; ticking = true;
+      requestAnimationFrame(function () {
+        par.forEach(function (el) { el.style.transform = 'translateY(' + (window.scrollY * parseFloat(el.dataset.parallax)) + 'px)'; });
+        ticking = false;
+      });
+    }, { passive: true });
+  }
+
+  $('#year').textContent = new Date().getFullYear();
+  buildSlots(); render();
+})();
+</script>
+</body>
+</html>
